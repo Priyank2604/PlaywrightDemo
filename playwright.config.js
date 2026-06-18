@@ -44,7 +44,8 @@ export default defineConfig({
         viewport:{width:1536, height:864},
         screenshot:"on",
         video:"on",
-        trace:"on"
+        trace:"on",
+        headless:false
        },
       
     },
@@ -59,6 +60,10 @@ export default defineConfig({
       use: { ...devices['Desktop Safari'] },
     },
 
+    {
+    name: 'chromium',
+    use: { browserName: 'chromium' },
+  },
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
